@@ -1,6 +1,8 @@
 \RequirePackage{plautopatch}
 \documentclass[12pt,a4paper,report,uplatex,dvipdfmx]{jsbook}
 \usepackage{mediathesis} % 卒論用パッケージ
+\usepackage{listings} 
+
 
 %% Include path の設定
 \graphicspath{{fig/}} %% グラフィック用
@@ -71,7 +73,9 @@
 \input{4kikounozissou}		% 第1章
 \input{5zikkenni}	
 \input{6siyourei}
-\input{7konngonotenbou}		% 第1章	
+\input{7konngonotenbou}	
+\input{sanpuru1}
+\input{sanpuru2}		% 第1章	
 \input{method}	
 
 \delchapnumber
@@ -79,7 +83,7 @@
 \bibliography{BibTeX}		% BibTeXを使う場合の参考文献リスト
 \bibliographystyle{junsrt}	% BibTeXを使う場合のスタイル
 \undochapnumber
-\appendix			% 付録 (もしあれば)
-\input{appendix}		% 付録ファイルの挿入
+%\appendix			% 付録 (もしあれば)
+%\input{appendix}		% 付録ファイルの挿入
 
 \end{document}
