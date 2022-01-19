@@ -24,7 +24,7 @@
   \includegraphics[width=10truecm]{./fig/yobi34.jpg}
   \caption{適当なサンプル2}
 % \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
-  \label{fig:ss}
+  \label{fig:yobipure}
 \end{figure}
 
 \begin{figure}[H]
@@ -32,10 +32,10 @@
   \includegraphics[width=10truecm]{./fig/yobi2.jpg}
   \caption{適当なサンプル2}
 % \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
-  \label{fig:ss}
+  \label{fig:yobitamesi}
 \end{figure}
 
-制作した装置は図 2 である．この装置を使い，水の粘度がどの程度、造形速度と造形精度に影響するのか調査を行った．
+制作した装置は図4.1である．この装置を使い，水の粘度がどの程度、造形速度と造形精度に影響するのか調査を行った．
 造形物はオーバーハングの調査を行うため図のように中を空洞になるように造形を行った． 実際に制作した装置を使い造形を行ったものが図である．
 造形時間は約 5 分ほどで完成した．造形精度の問題もあるが通常の3Dプリンターよりもかなり早い結果になった．
 大きさは横幅約 3 センチ，高さ約 1.5 センチほどである．使用した水の量は，約 200ml ほどである．
@@ -43,10 +43,10 @@
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10truecm]{./fig/yobi.jpg}
+  \includegraphics[width=14truecm]{./fig/yobi.jpg}
   \caption{適当なサンプル2}
 % \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
-  \label{fig:ss}
+  \label{fig:yobikekka}
 \end{figure}
 
 結果は予想通り，造形速度の改善と、オーバーハングができない問題の解消，これら二つを改善しつつ，さらに造形精度の向上ができた．
@@ -63,6 +63,26 @@
 造形用のペットに熱伝導率の高い金属製のアルミプレートを使用し、液体窒素の保温性を高める為発泡スチロールでできた容器に沈めた．
 液体窒素は-196℃であり，アルミプレートもそれに近い温度まで冷やされる．そこに水をたらすことで，水が冷やされ氷が作られる．
 氷は，アルミプレートを通して、液体窒素により冷やされ続けるため，氷の温度も0℃以下になる，その上に水をたらすとその水も氷へと状態が変化し氷が積層される．
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=9truecm]{./fig/printer.jpg}
+  \caption{開発した氷をマテリアルとしたプリンターの全体図（前）}
+% \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
+  \label{fig:printer}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=9truecm]{./fig/printer2.jpg}
+  \caption{開発した氷をマテリアルとしたプリンターの全体図（後）}
+% \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
+  \label{fig:printer2}
+\end{figure}
+
+
 
 \section{液体窒素を用いた造形の実装}
 \label{sec:paragraph}
@@ -90,6 +110,15 @@
 シリンジを押し出して水を供給するために，既存のエクストルーダー用のモーターを利用している．
 シリンジを押し出すためにモーターの回転を上下の運動へ置き換えるために、全ねじ棒を使用した．また，そのままモーターを直結してしまうと，力不足になることが想定されてため，ギヤで回転数を調整している．
 既存の3Dプリンターでは、フィラメントを押し出すモーターを利用しているため，PCを使い水の押し出し量を自由に調整することが可能であり，安定して造形ができる設定を模索することができる．
+また，シリンジは3Dプリンターを使い制作したが，サイズが研究室にあるプリンターに収まりきらなかったため，上下に分割して印刷し，印刷後接着剤により合体させている．
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=7truecm]{./fig/101285897.jpg}
+  \caption{シリンジの機構}
+% \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
+  \label{fig:printer2}
+\end{figure}
 
 \section{ノズルの機構}
 \label{sec:paragraph}
@@ -104,6 +133,14 @@
 また，アルミプレートの下に液体窒素がたまるようにくぼみをつけている．2つ目が造形用のトレーだ．熱伝導率の高い金属のプレートを使用する．今回はアルミ製のプレートを使用した．
 また，造形したものを取り出しやすくするために、取り外しが容易な設計を行った．完成したハードは図のようになっている．
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=7truecm]{./fig/101285898.jpg}
+  \caption{液体窒素造形用ベッド}
+% \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
+  \label{fig:stage}
+\end{figure}
+
 \section{マテリアルの検討}
 \label{sec:paragraph}
 今回開発する3DプリンターFDM方式の改良である．FDM方式では，常温で固体の物質を加熱し柔らかくしてから押し出している．
@@ -111,6 +148,7 @@
 違いとして，押し出されるときのマテリアルの粘度が印刷精度や印刷時間に違いをもたらしているのではと考える．
 今回開発した氷をマテリアルとして3Dプリンターの材料として水に砂糖を混ぜて粘度を上げたものを用意した．砂糖はどこでも手に入りかつ安価で扱いも簡単であるため，今回の実験に採用した，
 水と砂糖の割合は 1：1 ， 1：2 ， 1：3 のものを用意した．
+また， 1：2 ， 1：3の液体を作るにあたり，鍋で一度加熱する必要がある．
 
 
 
