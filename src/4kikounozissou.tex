@@ -21,7 +21,7 @@
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10truecm]{./fig/yobi34.jpg}
+  \includegraphics[width=9truecm]{./fig/yobi34.jpg}
   \caption{制作した実際の装置}
 % \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
   \label{fig:yobipure}
@@ -35,7 +35,7 @@
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=14truecm]{./fig/yobi.jpg}
+  \includegraphics[width=15truecm]{./fig/yobi.jpg}
   \caption{造形過程と完成物}
 % \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
   \label{fig:yobikekka}
@@ -94,23 +94,17 @@
 氷の3Dプリンターの制御は，Marlin-Ai3Mという3Dプリンターの制御用アプリケーションとMarilnというファームウェアを一部改造し使用している．
 改造内容は，モーターの駆動方向の変更，モータードライバーへの対応，３Dプリンターは安全装置として，一定の温度以下で作動しないようになっている．
 この安全装置が0℃以下で稼働する氷の３Dプリンターでは必要が無いため，無効にさせた．
+
 今回制作したプログラムは，Ultimaker Curaを通して「 Anycubic i3 Mega S 」にアップロードさせた．
 この作業を行ったことにより，基本的に一般に販売されている3Dプリンターと同じように制御することができる．
 
 \section{シリンジの機構}
 \label{sec:paragraph}
 シリンジを押し出して水を供給するために，既存のエクストルーダー用のモーターを利用している．
-シリンジを押し出すためにモーターの回転を上下の運動へ置き換えるために、全ねじ棒を使用した．また，そのままモーターを直結してしまうと，力不足になることが想定されてため，ギヤで回転数を調整している．
+シリンジを押し出すためにモーターの回転を上下の運動へ置き換えるために、全ねじ棒を使用した．また，そのままモーターを直結してしまうと，力不足になることが想定されてため，ギアで回転数を調整している．
 既存の3Dプリンターでは、フィラメントを押し出すモーターを利用しているため，PCを使い水の押し出し量を自由に調整することが可能であり，安定して造形ができる設定を模索することができる．
-また，シリンジは3Dプリンターを使い制作したが，サイズが研究室にあるプリンターに収まりきらなかったため，上下に分割して印刷し，印刷後接着剤により合体させている．
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=6truecm]{./fig/101285897.jpg}
-  \caption{シリンジの機構}
-% \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
-  \label{fig:printer2}
-\end{figure}
+シリンジは3Dプリンターを使い制作したが，サイズが研究室にあるプリンターに収まりきらなかったため，上下に分割して印刷し，印刷後接着剤により合体させている．
 
 \section{ノズルの機構}
 \label{sec:paragraph}
@@ -119,24 +113,32 @@
 そこで，シリンジを直接ノズルとして使用し，素材を押し出せる機構を制作した．
 また，ノズルサイズは今回の実験では1mmである．市販されているシリンダーの先をヒートガンで溶かし，先を塞いだ後にドリルによって穴を空けた．
 
-
 \begin{figure}[H]
   \centering
-  \includegraphics[width=15truecm]{./fig/sirinda.jpg}
-  \caption{ノズル}
+  \includegraphics[width=8truecm]{./fig/101285897.jpg}
+  \caption{シリンジの機構}
 % \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
-  \label{fig:stage}
+  \label{fig:printer2}
 \end{figure}
 
 \section{ベッドの機構}
 \label{sec:paragraph}
 液体窒素で氷を造形するベッドとして、大きく2つに分けられる．1つ目が液体窒素用のトレーだ．液体窒素用のトレーでは，下に保温性を高め、液体窒素の持ち時間を長くするために、発泡スチロールを使用した．
-また，アルミプレートの下に液体窒素がたまるようにくぼみをつけている．2つ目が造形用のトレーだ．熱伝導率の高い金属のプレートを使用する．今回はアルミ製のプレートを使用した．
+また，アルミプレートの下に液体窒素がたまるようにくぼみをつけている．
+2つ目が造形用のトレーだ．熱伝導率の高い金属のプレートを使用する．今回はアルミ製のプレートを使用した．
 また，造形したものを取り出しやすくするために、取り外しが容易な設計を行った．完成したハードは図4.8 のようになっている．
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=9truecm]{./fig/stage.jpg}
+  \includegraphics[width=14truecm]{./fig/sirinda.jpg}
+  \caption{ノズル}
+% \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
+  \label{fig:stage}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10truecm]{./fig/stage.jpg}
   \caption{液体窒素造形用ベッド}
 % \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
   \label{fig:stage}
@@ -147,13 +149,14 @@
 今回開発する3DプリンターFDM方式の改良である．FDM方式では，常温で固体の物質を加熱し柔らかくしてから押し出している．
 水のプリントの場合，既に液体を押し出し，冷やして固体にしてプリントする．
 違いとして，押し出されるときのマテリアルの粘度が印刷精度や印刷時間に違いをもたらしているのではと考える．
+
 今回開発した氷をマテリアルとして3Dプリンターの材料として水に砂糖を混ぜて粘度を上げたものを用意した．砂糖はどこでも手に入りかつ安価で扱いも簡単であるため，今回の実験に採用した，
 水と砂糖の割合は 1：3 のものを用意した．
 また， 1：3 の液体を作るにあたり，鍋で一度加熱する必要がある．
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=14truecm]{./fig/sugar.jpg}
+  \includegraphics[width=15truecm]{./fig/sugar.jpg}
   \caption{砂糖を添加した割合ごとの水}
 % \url{http://www.this.is.sample.url/} % Web上のデータの場合、参照先URLを明記
   \label{fig:stage}
